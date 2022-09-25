@@ -1,0 +1,21 @@
+.service-item:nth-child(-n + 4) {
+    border-bottom: 1px solid var(--chakra-colors-lightgray);
+}
+
+.service-item:not(:nth-child(4n)) {
+    border-right: 1px solid var(--chakra-colors-lightgray);
+}
+
+.service-item.no-border:not(:nth-child(4n))::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+
+    background-color: white;
+
+    top: -34%;
+    right: -6%;
+    position: absolute;
+    
+    border-radius: 50%;
+}
