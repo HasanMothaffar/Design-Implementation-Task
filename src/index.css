@@ -1,3 +1,7 @@
+html, body, #root {
+    overflow-x: hidden;
+}
+
 .service-item:nth-child(-n + 4) {
     border-bottom: 1px solid var(--chakra-colors-lightgray);
 }
@@ -16,6 +20,6 @@
     top: -34%;
     right: -6%;
     position: absolute;
-    
+
     border-radius: 50%;
 }

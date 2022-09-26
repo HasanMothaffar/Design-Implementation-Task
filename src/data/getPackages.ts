@@ -41,6 +41,10 @@ const packages = [
         title: "Basic Package",
         properties: sharedProperties,
         color: "red",
+        borderTop: "5px solid #f00",
+        borderRight: "5px solid #fff",
+        borderBottom: "5px solid #fff",
+        borderLeft: "5px solid #fff",
     },
 
     {
@@ -48,6 +52,10 @@ const packages = [
         title: "Basic Package",
         properties: sharedProperties,
         color: "yellow",
+        borderTop: "5px solid yellow",
+        borderRight: "5px solid yellow",
+        borderBottom: "5px solid #fff",
+        borderLeft: "5px solid #fff",
     },
 
     {
@@ -55,6 +63,10 @@ const packages = [
         title: "Basic Package",
         properties: sharedProperties,
         color: "blue",
+        borderTop: "5px solid blue",
+        borderRight: "5px solid blue",
+        borderBottom: "5px solid blue",
+        borderLeft: "5px solid #fff",
     },
 
     {
@@ -62,6 +74,10 @@ const packages = [
         title: "Basic Package",
         properties: sharedProperties,
         color: "green",
+        borderTop: "5px solid green",
+        borderBottom: "5px solid green",
+        borderRight: "5px solid green",
+        borderLeft: "5px solid green",
     },
 ];
 
