@@ -4,8 +4,8 @@ import { defineConfig } from "vite";
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [react()],
+    base: "/Design-Implementation-Task/",
     server: {
         port: 3000,
-        base: "/Design-Implementation-Task/"
     },
 });
