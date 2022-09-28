@@ -1,5 +1,7 @@
 I was given a task to re-implement the design of this website: https://bootstrapthemes.co/demo/html/gost-host-one-page-template/, so I uploaded this repository here.
 
+It also contains a simple todo app, as stated by the task's requirements.
+
 ## Technologies used
 
 -   React
