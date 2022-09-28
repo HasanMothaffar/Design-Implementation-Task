@@ -1,4 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import uuid4 from "uuid4";
 import httpClient from "../../../data/httpClient";
 import { queryClient } from "../../../data/react-query";

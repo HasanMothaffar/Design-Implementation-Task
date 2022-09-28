@@ -16,7 +16,7 @@ export const useEditTodo = () => {
                     todoToEdit.completed = editedTodo.completed;
                 }
 
-                return [...oldTodos];
+                return [...(oldTodos ?? [])];
             });
         },
     });
