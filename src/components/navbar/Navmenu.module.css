@@ -1,0 +1,30 @@
+.menuToggle {
+    display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+    .menuToggle {
+        display: block !important;
+    }
+
+    .navmenu {
+        position: absolute;
+        flex-direction: column;
+        top: 90px;
+        background-color: var(--chakra-colors-navbarbg);
+        width: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        pointer-events: none;
+        max-height: 0;
+        transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+        overflow: hidden;
+    }
+
+    .navmenu.expanded {
+        max-height: 550px;
+        pointer-events: all;
+        transition: max-height 1s ease-in-out;
+    }
+}

@@ -22,16 +22,16 @@ const people = [
 
 const AboutUs = () => {
     return (
-        <BaseSection>
+        <BaseSection containerProps={{my: 32}}>
             <BaseContainer>
-                <Grid templateColumns={["1fr", null, null, "2fr 3fr"]}>
+                <Grid templateColumns={["1fr", null, null, "2fr 3fr"]} pt={20} borderTop="1px dotted var(--chakra-colors-lightgray)">
                     <GridItem
-                        borderRight="1px dotted var(--chakra-colors-lightgray)"
-                        pr={{ base: 0, md: 16 }}
-                        mb={{ base: 10, md: 0 }}
-                        textAlign={{ base: "center", md: "left" }}
+                        mb={{ base: 10, lg: 0 }}
+                        pr={{ base: 0, lg: 16 }}
+                        textAlign={{ base: "center", lg: "left" }}
+                        borderRight={{base: "", lg: "1px dotted var(--chakra-colors-lightgray)"}}
                     >
-                        <Text as="h2" fontSize="3xl" fontWeight="bold" mb={4}>
+                        <Text as="h2" mb={4} color="#565656" fontSize="3xl" fontWeight="500">
                             About Us
                         </Text>
                         <Text textStyle="description">
@@ -42,7 +42,7 @@ const AboutUs = () => {
                         </Text>
                     </GridItem>
 
-                    <GridItem display="flex" justifyContent="space-around">
+                    <GridItem justifyContent="space-around" display="flex">
                         {people.map((person, index) => (
                             <PersonBubble {...person} key={index} />
                         ))}

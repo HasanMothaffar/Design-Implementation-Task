@@ -4,24 +4,39 @@ body,
     overflow-x: hidden;
 }
 
-.service-item:nth-child(-n + 4) {
-    border-bottom: 1px solid var(--chakra-colors-lightgray);
+@media screen and (min-width: 992px) {
+    .service-item:nth-child(-n + 4) {
+        border-bottom: 1px solid var(--chakra-colors-lightgray);
+    }
+    
+    .service-item:not(:nth-child(4n)) {
+        border-right: 1px solid var(--chakra-colors-lightgray);
+    }
+
+    .service-item.no-border:not(:nth-child(4n))::after {
+        content: "";
+        width: 30px;
+        height: 30px;
+    
+        background-color: white;
+    
+        top: -34%;
+        right: -6%;
+    
+        position: absolute;
+    
+        border-radius: 50%;
+    }
 }
 
-.service-item:not(:nth-child(4n)) {
-    border-right: 1px solid var(--chakra-colors-lightgray);
+@media screen and (max-width: 991px) {
+    .service-item:not(:nth-child(-n + 2)) {
+        border-top: 1px solid var(--chakra-colors-lightgray);
+    }
+    
+    .service-item:nth-child(2n + 1) {
+        border-right: 1px solid var(--chakra-colors-lightgray);
+    }
 }
 
-.service-item.no-border:not(:nth-child(4n))::after {
-    content: "";
-    width: 30px;
-    height: 30px;
 
-    background-color: white;
-
-    top: -34%;
-    right: -6%;
-    position: absolute;
-
-    border-radius: 50%;
-}

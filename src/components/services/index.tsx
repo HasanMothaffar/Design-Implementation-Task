@@ -10,6 +10,7 @@ import {
 import { useGetServices } from "../../data/getServices";
 import BaseContainer from "../shared/BaseContainer";
 import BaseSection from "../shared/BaseSection";
+import DomainInput from "./DomainInput";
 
 interface ServiceItemProps {
     children: React.ReactNode;
@@ -19,34 +20,34 @@ interface ServiceItemProps {
 const ServiceItem = ({ children, customClass = "" }: ServiceItemProps) => {
     return (
         <GridItem
+            className={`service-item ${customClass}`}
+            position="relative"
+            alignItems="center"
+            justifyContent="center"
+            display="flex"
             w="100%"
             h="10"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            p={[4, 8, 12, 14]}
-            position="relative"
+            p={[8, 12, 14]}
             color="gray.600"
-            className={`service-item ${customClass}`}
-            whiteSpace="nowrap"
+            textAlign="center"
         >
             {children}
         </GridItem>
     );
 };
 
-const Services = () => {
+const Services = ({ scrollId = "" }) => {
     const { serviceRows } = useGetServices();
 
     return (
-        <BaseSection>
+        <BaseSection containerProps={{id: "domain"}}>            
             <BaseContainer
                 containerProps={{
                     centerContent: true,
                     as: "section",
                 }}
             >
-                <Text as="h3" textStyle="h3" fontWeight="bold" mb={4} textAlign="center">
+                <Text as="h3" textStyle="h3" mb={4} fontWeight="bold" textAlign="center">
                     Would you like to buy a new domain ?
                 </Text>
 
@@ -55,43 +56,15 @@ const Services = () => {
                     mauris ac nulla interdum, id molestier.
                 </Text>
 
-                <InputGroup size="lg" my={10}>
-                    <InputLeftElement
-                        border="1px solid var(--chakra-colors-lightgray)"
-                        width="5rem"
-                    >
-                        www.
-                    </InputLeftElement>
-                    <Input
-                        placeholder="mysite"
-                        borderRadius="0"
-                        style={{ paddingLeft: "5.5rem", paddingRight: "5.5rem" }}
-                    />
-                    <InputRightElement width="5rem" height="100%">
-                        <select
-                            name="tld"
-                            id="tld"
-                            placeholder=".com"
-                            style={{
-                                border: "1px solid var(--chakra-colors-lightgray)",
-                                height: "100%",
-                                width: "100%",
-                                textAlign: "center",
-                            }}
-                        >
-                            <option value=".com">.com</option>
-                            <option value=".org">.org</option>
-                            <option value=".ca">.ca</option>
-                        </select>
-                    </InputRightElement>
-                </InputGroup>
+                <DomainInput />
 
                 <Grid
-                    templateColumns="repeat(4, 1fr)"
-                    gap={6}
+                    gap={{base: 0, lg: 6}}
+                    templateColumns={{base: "repeat(2, 1fr)", lg: "repeat(4, 1fr)"}}
                     width="100%"
+                    px={6}
+                    py={{base: 0, lg: 6}}
                     border="1px solid var(--chakra-colors-lightgray)"
-                    p={6}
                 >
                     {serviceRows.map((row, rowIndex) => {
                         return row.services.map((service, index) => (

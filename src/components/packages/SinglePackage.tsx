@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Flex } from "@chakra-ui/react";
 
 const Star = ({
     fill = "yellow",
@@ -8,19 +8,18 @@ const Star = ({
     borderBottom = "",
 }) => {
     return (
-        <Box
-            borderTop={borderTop}
-            borderRight={borderRight}
-            borderLeft={borderLeft}
-            borderBottom={borderBottom}
-            borderRadius="50%"
+        <Flex
+            alignItems="center"
+            justifyContent="center"
             width="80px"
             height="80px"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            mx="auto"
             mb={4}
+            mx="auto"
+            borderTop={borderTop}
+            borderRight={borderRight}
+            borderBottom={borderBottom}
+            borderLeft={borderLeft}
+            borderRadius="50%"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +31,7 @@ const Star = ({
             >
                 <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
             </svg>
-        </Box>
+        </Flex>
     );
 };
 
@@ -65,13 +64,15 @@ const SinglePackage = ({
 }: PackageProps) => {
     return (
         <Box
+            px={4}
+            py={10}
             border="1px solid var(--chakra-colors-lightgray)"
             borderTop={`5px solid ${color}`}
-            py={10}
-            px={4}
+            boxShadow="8px 10px 27px -18px rgb(0 0 0 / 57%)"
             bgColor="#fff"
+
         >
-            <Box textAlign="center" mb={10} borderBottom="1px solid silver" pb={4}>
+            <Box mb={10} pb={4} textAlign="center" borderBottom="1px solid silver">
                 <Star
                     fill={color}
                     borderTop={borderTop}
@@ -87,16 +88,15 @@ const SinglePackage = ({
             <Box as="ul" listStyleType="none">
                 {properties.map((property, index) => {
                     return (
-                        <Box
-                            as="li"
+                        <Flex
                             key={index}
-                            display="flex"
+                            as="li"
                             justifyContent="space-between"
                             mb={4}
                         >
                             <Box>{property.title}</Box>
                             <Box color={color}>{property.content}</Box>
-                        </Box>
+                        </Flex>
                     );
                 })}
             </Box>
@@ -104,17 +104,17 @@ const SinglePackage = ({
             <Box textAlign="center">
                 <Text
                     as="h3"
-                    borderBottom={`4px solid ${color}`}
                     display="inline-block"
+                    mb={4}
                     fontSize="3xl"
                     fontWeight="bold"
-                    mb={4}
+                    borderBottom={`4px solid ${color}`}
                 >
-                    <Box fontSize="xl" as="span">
+                    <Box as="span" fontSize="xl">
                         $
                     </Box>{" "}
                     20{" "}
-                    <Box fontSize="xl" as="span" fontWeight="normal">
+                    <Box as="span" fontSize="xl" fontWeight="normal">
                         /Mo{" "}
                     </Box>
                 </Text>

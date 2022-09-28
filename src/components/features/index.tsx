@@ -33,7 +33,7 @@ const Features = () => {
     return (
         <BaseSection>
             <BaseContainer>
-                <Grid templateColumns="repeat(auto-fit, minmax(200px, auto))" gap={8}>
+                <Grid gap={8} templateColumns="repeat(auto-fit, minmax(200px, auto))">
                     {featuresData.map((feature, index) => {
                         return (
                             <GridItem key={index}>

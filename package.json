@@ -7,6 +7,7 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
+        "lint:fix": "eslint --fix .",
         "gen:theme-typings": "chakra-cli tokens ./src/theme.ts"
     },
     "dependencies": {
@@ -15,9 +16,12 @@
         "@emotion/react": "^11.10.4",
         "@emotion/styled": "^11.10.4",
         "@splidejs/react-splide": "^0.7.11",
+        "@tanstack/react-query": "^4.6.1",
+        "axios": "^0.27.2",
         "framer-motion": "^7.3.6",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "uuid4": "^2.0.3"
     },
     "devDependencies": {
         "@chakra-ui/cli": "^2.1.8",
@@ -27,6 +31,7 @@
         "@typescript-eslint/parser": "^5.38.0",
         "@vitejs/plugin-react": "^2.1.0",
         "eslint": "^8.24.0",
+        "eslint-plugin-chakra-ui": "^0.7.4",
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-jsx-a11y": "^6.6.1",
         "eslint-plugin-react": "^7.31.8",

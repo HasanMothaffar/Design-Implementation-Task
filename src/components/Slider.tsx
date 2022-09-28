@@ -1,11 +1,11 @@
 import { Box, Center, Text } from "@chakra-ui/react";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
-import BaseContainer from "../shared/BaseContainer";
-import BaseSection from "../shared/BaseSection";
+import BaseContainer from "./shared/BaseContainer";
+import BaseSection from "./shared/BaseSection";
 
 const Quote = () => {
     return (
-        <Box textAlign="center" color="#fff">
+        <Box color="#fff" textAlign="center">
             <Text mb={4}>
                 <q>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eum
@@ -29,7 +29,7 @@ const SliderSection = () => {
                 height: "250px",
             }}
         >
-            <Center backgroundColor="rgba(0, 0, 0, 0.5)" height="100%">
+            <Center height="100%" backgroundColor="rgba(0, 0, 0, 0.5)">
                 <BaseContainer>
                     <Splide
                         hasTrack={false}
@@ -39,6 +39,11 @@ const SliderSection = () => {
                             type: "loop",
                             height: "150px",
                             arrows: false,
+                            breakpoints: {
+                                700: {
+                                    height: "170px"
+                                }
+                            }
                         }}
                     >
                         <SplideTrack>

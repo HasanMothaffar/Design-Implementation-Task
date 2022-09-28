@@ -9,12 +9,12 @@ const Packages = () => {
     return (
         <BaseSection>
             <Box
+                width="100%"
+                height="400px"
                 backgroundImage="url(https://bootstrapthemes.co/demo/html/gost-host-one-page-template/assets/images/pricingbg.jpg)"
                 backgroundSize="cover"
-                backgroundRepeat="no-repeat"
                 backgroundPosition="100%"
-                height="400px"
-                width="100%"
+                backgroundRepeat="no-repeat"
                 filter="brightness(0.4)"
             ></Box>
             <BaseContainer

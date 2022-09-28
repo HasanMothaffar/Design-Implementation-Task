@@ -10,18 +10,19 @@ export const theme = extendTheme({
     semanticTokens: {
         colors: {
             gray: "#777",
-            lightgray: "#ddd"
+            lightgray: "#ddd",
+            navbarbg: "#3d3325",
         },
     },
 
     textStyles: {
         h3: {
-            fontSize: "1.5rem"
+            fontSize: "1.5rem",
         },
 
         description: {
             fontSize: "1rem",
-            color: "#a2a2a2"
-        }
-    }
+            color: "#a2a2a2",
+        },
+    },
 });
