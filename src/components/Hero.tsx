@@ -63,7 +63,7 @@ const Hero = () => {
         <>
             <Box
                 as="section"
-                bgImage="url(/homebg.jpg)"
+                bgImage="url(./homebg.jpg)"
                 bgSize="cover"
                 bgRepeat="no-repeat"
                 id="home"
