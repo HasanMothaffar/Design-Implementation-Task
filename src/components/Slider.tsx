@@ -41,9 +41,9 @@ const SliderSection = () => {
                             arrows: false,
                             breakpoints: {
                                 700: {
-                                    height: "170px"
-                                }
-                            }
+                                    height: "170px",
+                                },
+                            },
                         }}
                     >
                         <SplideTrack>

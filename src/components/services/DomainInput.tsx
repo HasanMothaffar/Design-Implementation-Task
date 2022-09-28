@@ -1,4 +1,4 @@
-import { InputGroup, InputLeftElement, Input, InputRightElement } from "@chakra-ui/react"
+import { Input, InputGroup, InputLeftElement, InputRightElement } from "@chakra-ui/react";
 
 const DomainInput = () => {
     const leftAndRightInputWidth = "5rem";
@@ -34,6 +34,6 @@ const DomainInput = () => {
                 </select>
             </InputRightElement>
         </InputGroup>
-    )
-}
-export default DomainInput
+    );
+};
+export default DomainInput;

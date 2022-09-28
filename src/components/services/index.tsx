@@ -1,12 +1,4 @@
-import {
-    Grid,
-    GridItem,
-    Input,
-    InputGroup,
-    InputLeftElement,
-    InputRightElement,
-    Text,
-} from "@chakra-ui/react";
+import { Grid, GridItem, Text } from "@chakra-ui/react";
 import { useGetServices } from "../../data/getServices";
 import BaseContainer from "../shared/BaseContainer";
 import BaseSection from "../shared/BaseSection";
@@ -36,11 +28,11 @@ const ServiceItem = ({ children, customClass = "" }: ServiceItemProps) => {
     );
 };
 
-const Services = ({ scrollId = "" }) => {
+const Services = () => {
     const { serviceRows } = useGetServices();
 
     return (
-        <BaseSection containerProps={{id: "domain"}}>            
+        <BaseSection containerProps={{ id: "domain" }}>
             <BaseContainer
                 containerProps={{
                     centerContent: true,
@@ -59,11 +51,11 @@ const Services = ({ scrollId = "" }) => {
                 <DomainInput />
 
                 <Grid
-                    gap={{base: 0, lg: 6}}
-                    templateColumns={{base: "repeat(2, 1fr)", lg: "repeat(4, 1fr)"}}
+                    gap={{ base: 0, lg: 6 }}
+                    templateColumns={{ base: "repeat(2, 1fr)", lg: "repeat(4, 1fr)" }}
                     width="100%"
                     px={6}
-                    py={{base: 0, lg: 6}}
+                    py={{ base: 0, lg: 6 }}
                     border="1px solid var(--chakra-colors-lightgray)"
                 >
                     {serviceRows.map((row, rowIndex) => {

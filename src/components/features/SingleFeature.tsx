@@ -15,7 +15,9 @@ const SingleFeature = ({ title = "", fill = "yellow", icon }: FeatureProps) => {
             <Text as="h4" fontSize="lg" fontWeight="500">
                 {title}
             </Text>
-            <Text color="#686868">Nulla dapibus neque augue, quis tincidunt tortor aliquam vitae.</Text>
+            <Text color="#686868">
+                Nulla dapibus neque augue, quis tincidunt tortor aliquam vitae.
+            </Text>
         </Stack>
     );
 };

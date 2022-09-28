@@ -22,14 +22,18 @@ const people = [
 
 const AboutUs = () => {
     return (
-        <BaseSection containerProps={{my: 32}}>
+        <BaseSection containerProps={{ my: 32 }}>
             <BaseContainer>
-                <Grid templateColumns={["1fr", null, null, "2fr 3fr"]} pt={20} borderTop="1px dotted var(--chakra-colors-lightgray)">
+                <Grid
+                    templateColumns={["1fr", null, null, "2fr 3fr"]}
+                    pt={20}
+                    borderTop="1px dotted var(--chakra-colors-lightgray)"
+                >
                     <GridItem
                         mb={{ base: 10, lg: 0 }}
                         pr={{ base: 0, lg: 16 }}
                         textAlign={{ base: "center", lg: "left" }}
-                        borderRight={{base: "", lg: "1px dotted var(--chakra-colors-lightgray)"}}
+                        borderRight={{ base: "", lg: "1px dotted var(--chakra-colors-lightgray)" }}
                     >
                         <Text as="h2" mb={4} color="#565656" fontSize="3xl" fontWeight="500">
                             About Us

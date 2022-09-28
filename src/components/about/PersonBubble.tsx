@@ -1,7 +1,7 @@
 import { StarIcon } from "@chakra-ui/icons";
 import { HStack, Stack, Text } from "@chakra-ui/react";
 
-const PersonBubble = ({ title = "", description = "" }) => {
+const PersonBubble = () => {
     return (
         <Stack alignItems="center">
             <img
@@ -12,7 +12,9 @@ const PersonBubble = ({ title = "", description = "" }) => {
                 style={{ borderRadius: "50%", border: "5px solid #e5e5e5" }}
             />
             <Text fontWeight="bold">Jonny Doe</Text>
-            <Text textStyle="description" fontSize="sm" >Designer</Text>
+            <Text textStyle="description" fontSize="sm">
+                Designer
+            </Text>
 
             <HStack mt="20px !important">
                 <StarIcon color="gray" width="10px" height="10px" />

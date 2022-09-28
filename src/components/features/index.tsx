@@ -1,4 +1,4 @@
-import { InfoOutlineIcon } from "@chakra-ui/icons";
+import { InfoOutlineIcon, LinkIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { Grid, GridItem } from "@chakra-ui/react";
 import BaseContainer from "../shared/BaseContainer";
 import BaseSection from "../shared/BaseSection";
@@ -8,24 +8,24 @@ const featuresData = [
     {
         title: "Fast Servers",
         fill: "#f1c40f",
-        icon: <InfoOutlineIcon />,
+        icon: <InfoOutlineIcon color="#fff" />,
     },
 
     {
         title: "Cloud Servers",
         fill: "#0faff1",
-        icon: <InfoOutlineIcon />,
+        icon: <SunIcon color="#fff" />,
     },
     {
         title: "Domain Transfer",
         fill: "#95a5a6",
-        icon: <InfoOutlineIcon />,
+        icon: <MoonIcon color="#fff" />,
     },
 
     {
         title: "Live Support",
         fill: "#f1540f",
-        icon: <InfoOutlineIcon />,
+        icon: <LinkIcon color="#fff" />,
     },
 ];
 

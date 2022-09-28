@@ -38,6 +38,6 @@ const serviceRows = [
 
 export const useGetServices = () => {
     return {
-        serviceRows
-    }
+        serviceRows,
+    };
 };
