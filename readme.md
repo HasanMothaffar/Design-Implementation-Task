@@ -1,8 +1,12 @@
-## Design system
+I was given a task to re-implement the design of this website: https://bootstrapthemes.co/demo/html/gost-host-one-page-template/, so I uploaded this repository here.
 
-Colors:
+## Technologies used
 
--   Gray: #777
+-   React
+-   Chakra UI
+-   Vite
+-   TypeScript
+-   React Query (for simple data fetching)
 
 ## ESLint config guides
 
