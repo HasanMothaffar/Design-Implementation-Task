@@ -10,7 +10,6 @@ export const useDeleteTodo = () => {
 
     return useMutation(deleteTodo, {
         onSuccess: (_, id) => {
-            // Optimistically update to the new value
             queryClient.setQueryData<ITodo[]>(["todos"], (oldTodos) =>
                 oldTodos?.filter((todo) => todo.id !== id)
             );

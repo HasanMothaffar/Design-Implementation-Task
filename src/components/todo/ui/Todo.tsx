@@ -8,7 +8,11 @@ import { useEditTodo } from "../api/editTodo";
 import { ITodo } from "../types";
 import Loader from "./Loader";
 
-const Todo = memo(({ title, completed, id }: ITodo) => {
+interface TodoProps extends ITodo {
+    index: number;
+}
+
+const Todo = memo(({ title, completed, id, index }: TodoProps) => {
     const toast = useToast();
     const { mutateAsync: deleteTodoMutation, isLoading: isDeleteLoading } = useDeleteTodo();
     const { mutateAsync: editTodoMutation, isLoading: isEditLoading } = useEditTodo();
@@ -20,7 +24,7 @@ const Todo = memo(({ title, completed, id }: ITodo) => {
         });
 
         toast({
-            title: `Todo #${id} was edited successfully!`,
+            title: `Todo #${index + 1} was edited successfully!`,
             status: "success",
         });
     };
@@ -28,13 +32,13 @@ const Todo = memo(({ title, completed, id }: ITodo) => {
     const deleteTodo = async (id: number) => {
         await deleteTodoMutation(id);
         toast({
-            title: `Todo #${id} was removed successfully!`,
+            title: `Todo #${index + 1} was removed successfully!`,
             status: "success",
         });
     };
 
     return (
-        <motion.div
+        <motion.li
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, x: 200 }}
@@ -58,7 +62,7 @@ const Todo = memo(({ title, completed, id }: ITodo) => {
                         textTransform="capitalize"
                         textDecoration={isDeleteLoading ? "line-through" : ""}
                     >
-                        {title}
+                        {index + 1}. {title}
                     </Text>
 
                     {isDeleteLoading && <Loader size="5" />}
@@ -79,7 +83,7 @@ const Todo = memo(({ title, completed, id }: ITodo) => {
                     </Checkbox>
                 </Center>
             </Flex>
-        </motion.div>
+        </motion.li>
     );
 });
 

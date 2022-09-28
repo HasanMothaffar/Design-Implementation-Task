@@ -1,10 +1,7 @@
 import { ITodo } from "./types";
+import { ITodoFilters } from "./ui/TodoFilters";
 
-interface Filters {
-    onlyComplete: boolean;
-}
-
-export const getFilteredTodos = (todos: ITodo[] = [], filters: Filters): ITodo[] => {
+export const getFilteredTodos = (todos: ITodo[] = [], filters: ITodoFilters): ITodo[] => {
     let filteredTodos: ITodo[] = [...todos];
 
     if (filters.onlyComplete) {
